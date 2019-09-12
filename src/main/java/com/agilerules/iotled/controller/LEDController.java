@@ -27,8 +27,8 @@ public class LEDController {
 	public String getDistance(){
 		
 			GpioController gpio = GpioFactory.getInstance();
-			gpioTrigger =  gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00);
-			gpioEcho = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02,PinPullResistance.PULL_DOWN); // Echo pin as INPUT
+			gpioTrigger =  gpio.provisionDigitalOutputPin(RaspiPin.GPIO_18);
+			gpioEcho = gpio.provisionDigitalInputPin(RaspiPin.GPIO_24,PinPullResistance.PULL_DOWN); // Echo pin as INPUT
 			while(true){
 				try {
 				Thread.sleep(2000);
