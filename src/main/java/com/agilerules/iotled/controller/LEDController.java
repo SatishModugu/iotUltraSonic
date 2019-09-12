@@ -29,7 +29,8 @@ public class LEDController {
 			GpioController gpio = GpioFactory.getInstance();
 			gpioTrigger =  gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00);
 			gpioEcho = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02,PinPullResistance.PULL_DOWN); // Echo pin as INPUT
-			while(true){
+			long startTime=0;
+			long endTime=0;
 				try {
 				Thread.sleep(2000);
 				gpioTrigger.high(); // Make trigger pin HIGH
@@ -39,19 +40,20 @@ public class LEDController {
 				while(gpioEcho.isLow()){ //Wait until the ECHO pin gets HIGH
 					
 				}
-				long startTime= System.nanoTime(); // Store the surrent time to calculate ECHO pin HIGH time.
+				 startTime= System.nanoTime(); // Store the current time to calculate ECHO pin HIGH time.
 				while(gpioEcho.isHigh()){ //Wait until the ECHO pin gets LOW
 					
 				}
-				long endTime= System.nanoTime(); // Store the echo pin HIGH end time to calculate ECHO pin HIGH time.
+				endTime= System.nanoTime(); // Store the echo pin HIGH end time to calculate ECHO pin HIGH time.
 			
 				System.out.println("Distance :"+((((endTime-startTime)/1e3)/2) / 29.1) +" cm"); //Printing out the distance in cm  
 				Thread.sleep(1000);
-				return "Distance :"+((((endTime-startTime)/1e3)/2) / 29.1) +" cm";
+				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 				}
-			}		
+				return "Distance :"+((((endTime-startTime)/1e3)/2) / 29.1) +" cm";
+					
 	}
 
 }
