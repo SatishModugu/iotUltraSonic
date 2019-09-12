@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: iotled
+Implementation-Title: iotUltraSonic
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: smodugu
 Implementation-Vendor-Id: com.agilerules
