@@ -20,10 +20,10 @@ public class LEDController {
 	
 	@RequestMapping("/")
 	public String greeting(){
-		return "Hello World!!";
+		return "Inventory detecting Service!!";
 	}
 	
-	@RequestMapping("/light")
+	@RequestMapping("/level")
 	public String getDistance(){
 		
 			GpioController gpio = GpioFactory.getInstance();
