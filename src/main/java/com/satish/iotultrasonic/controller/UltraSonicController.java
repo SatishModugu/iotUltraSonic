@@ -1,4 +1,4 @@
-package com.agilerules.iotled.controller;
+package com.satish.iotultrasonic.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.pi4j.io.gpio.GpioController;
@@ -11,7 +11,7 @@ import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
 
 @RestController
-public class LEDController {
+public class UltraSonicController {
 	
 	public static GpioPinDigitalOutput pin;
 	public static GpioPinDigitalOutput gpioTrigger;
@@ -22,7 +22,6 @@ public class LEDController {
 	public String greeting(){
 		return "Inventory detecting Service!!";
 	}
-	
 	@RequestMapping("/level")
 	public String getDistance(){
 		
