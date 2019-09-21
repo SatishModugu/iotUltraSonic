@@ -42,7 +42,7 @@ public class UltraSonicController {
 				while(gpioEcho.isLow()){ //Wait until the ECHO pin gets HIGH
 					
 				}
-				 startTime= System.nanoTime(); // Store the surrent time to calculate ECHO pin HIGH time.
+				 startTime= System.nanoTime(); // Store the current time to calculate ECHO pin HIGH time.
 				while(gpioEcho.isHigh()){ //Wait until the ECHO pin gets LOW
 					
 				}
