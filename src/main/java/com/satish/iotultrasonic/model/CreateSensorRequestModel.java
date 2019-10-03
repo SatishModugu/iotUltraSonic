@@ -1,41 +1,17 @@
 package com.satish.iotultrasonic.model;
 
+import javax.validation.constraints.NotNull;
+
 public class CreateSensorRequestModel {
-	private String deviceName;
-	private String date;
-	private String time;
-	private String value;
+	
+	@NotNull(message="deviceID cannot be null")
+	private String deviceId;
 
-	public String getDeviceName() {
-		return deviceName;
+	public String getDeviceId() {
+		return deviceId;
 	}
 
-	public void setDeviceName(String deviceName) {
-		this.deviceName = deviceName;
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
 	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-
-	public String getValue() {
-		return value;
-	}
-
-	public void setValue(String value) {
-		this.value = value;
-	}
-
 }

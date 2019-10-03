@@ -1,4 +1,5 @@
 package com.satish.iotultrasonic.controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.pi4j.io.gpio.GpioController;
@@ -21,6 +22,11 @@ public class UltraSonicController {
 	@RequestMapping("/")
 	public String greeting(){
 		return "Inventory detecting Service!!";
+	}
+	
+	@GetMapping(path="/get-device-data")
+	public String getDeviceData(){
+	return "";
 	}
 	@RequestMapping("/level")
 	public String getDistance(){
